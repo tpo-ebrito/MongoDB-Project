@@ -1,0 +1,44 @@
+{
+  "name": "test-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/server.js",
+  "scripts": {
+    "test": "standard && npm run test:unit && npm run test:func",
+    "test:unit": "mocha \"app/**/*.spec.js\"",
+    "test:func": "mocha",
+    "test:security": "mocha \"security/*.spec.js\"",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/projectopportunity/test-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/projectopportunity/test-api/issues"
+  },
+  "homepage": "https://github.com/projectopportunity/test-api#readme",
+  "devDependencies": {
+    "axios": "^0.21.1",
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^8.3.2",
+    "procmonrest": "^1.0.0",
+    "standard": "^16.0.3"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.7",
+    "sequelize": "^6.6.2",
+    "sqlite3": "^5.0.2",
+    "ulid": "^2.3.0"
+  },
+  "mocha": {
+    "require": "test/setup.js",
+    "reporter": "nyan"
+  }
+}

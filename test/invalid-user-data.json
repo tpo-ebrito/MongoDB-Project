@@ -1,0 +1,161 @@
+[
+  {
+    "description": "missing first name",
+    "input": {
+      "lastName": "test",
+      "emailAddress": "test@example.com",
+      "password": "test"
+    },
+    "output": {
+      "errors": ["missing required field firstName"]
+    }
+  },
+  {
+    "description": "missing last name",
+    "input": {
+      "firstName": "test",
+      "emailAddress": "test@example.com",
+      "password": "test"
+    },
+    "output": {
+      "errors": ["missing required field lastName"]
+    }
+  },
+  {
+    "description": "missing first and last name",
+    "input": {
+      "emailAddress": "test@example.com",
+      "password": "test"
+    },
+    "output": {
+      "errors": [
+        "missing required field firstName",
+        "missing required field lastName"
+      ]
+    }
+  },
+  {
+    "description": "blank first name",
+    "input": {
+      "firstName": "",
+      "lastName": "test",
+      "emailAddress": "test@example.com",
+      "password": "test"
+    },
+    "output": {
+      "errors": [
+        "missing required field firstName"
+      ]
+    }
+  },
+  {
+    "description": "first name that is not a string",
+    "input": {
+      "firstName": 3.1415,
+      "lastName": "test",
+      "emailAddress": "test@example.com",
+      "password": "test"
+    },
+    "output": {
+      "errors": [
+        "missing required field firstName"
+      ]
+    }
+  },
+  {
+    "description": "first name that is white space",
+    "input": {
+      "firstName": "    ",
+      "lastName": "test",
+      "emailAddress": "test@example.com",
+      "password": "test"
+    },
+    "output": {
+      "errors": [
+        "missing required field firstName"
+      ]
+    }
+  },
+  {
+    "description": "missing email",
+    "input": {
+      "firstName": "test",
+      "lastName": "test",
+      "password": "test"
+    },
+    "output": {
+      "errors": [
+        "missing required field emailAddress"
+      ]
+    }
+  },
+  {
+    "description": "blank email",
+    "input": {
+      "firstName": "test",
+      "lastName": "test",
+      "emailAddress": "",
+      "password": "test"
+    },
+    "output": {
+      "errors": [
+        "missing required field emailAddress"
+      ]
+    }
+  },
+  {
+    "description": "white space email",
+    "input": {
+      "firstName": "test",
+      "lastName": "test",
+      "emailAddress": "       ",
+      "password": "test"
+    },
+    "output": {
+      "errors": [
+        "missing required field emailAddress"
+      ]
+    }
+  },
+  {
+    "description": "missing password",
+    "input": {
+      "firstName": "test",
+      "lastName": "test",
+      "emailAddress": "test@test.com"
+    },
+    "output": {
+      "errors": [
+        "missing required field password"
+      ]
+    }
+  },
+  {
+    "description": "empty password",
+    "input": {
+      "firstName": "test",
+      "lastName": "test",
+      "emailAddress": "test@test.com",
+      "password": ""
+    },
+    "output": {
+      "errors": [
+        "missing required field password"
+      ]
+    }
+  },
+  {
+    "description": "white space password",
+    "input": {
+      "firstName": "test",
+      "lastName": "test",
+      "emailAddress": "test@test.com",
+      "password": "  "
+    },
+    "output": {
+      "errors": [
+        "missing required field password"
+      ]
+    }
+  }
+]
